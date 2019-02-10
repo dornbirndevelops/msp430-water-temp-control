@@ -1,0 +1,1 @@
+"./boot.obj" "./button.obj" "./display.obj" "./led.obj" "./main.obj" "./onewire.obj" "./temp.obj" "./temperature.obj" "./test.obj" "../lnk_msp430fr6989.cmd" -llibmpu_init.a -llibmath.a -llibc.a 
