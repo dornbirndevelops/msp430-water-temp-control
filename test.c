@@ -10,12 +10,11 @@
 #include "led.h"
 #include "button.h"
 #include "display.h"
-#include "temp.h"
-#include "temperature.h"
+#include "thermometer.h"
 #include <msp430.h>
 
-
-void delayTest() {
+void delayTest()
+{
     static unsigned value = 0;
     DELAY_MS(1000);
     value ^= 1;
@@ -73,20 +72,25 @@ void displayTest()
     displayScrollText("HALLO WELT DIESER TEXT KOMMT VON ALEX");
 }
 
-void temperatureTest()
+void deviceIdTest()
 {
-    float temp = get_temp();
-    displayTemperature(temp);
+    volatile deviceaddress_t device = 0;
+    device = thermometer_getAddress();
     __delay_cycles(200000);
 }
 
-void temperatureTestAlex() {
-    OneWire thermometerBus = onewire_new(2, 1);
-    Thermometer thermometer = thermometer_new(&thermometerBus, 0);
+#define THERMOMETER_COUNT 1
+static float temperatures[THERMOMETER_COUNT] = { 0.0 };
+static deviceaddress_t devices[THERMOMETER_COUNT] = { 0x0D0114339EA1D228 };
 
-    while(1) {
-        float temp = thermometer_readTemperatureCelsius(&thermometer);
-        displayTemperature(temp);
+void temperatureManyTest()
+{
+    thermometer_getTemperaturesC(temperatures, devices, THERMOMETER_COUNT);
+    uint8_t i = THERMOMETER_COUNT;
+    while (i--)
+    {
+        displayTemperature(temperatures[i]);
         __delay_cycles(200000);
     }
+    __delay_cycles(500000);
 }

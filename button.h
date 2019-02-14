@@ -8,7 +8,10 @@
 #ifndef BUTTON_H_
 #define BUTTON_H_
 
-typedef enum { BUTTON_LEFT, BUTTON_RIGHT, BUTTON_AMOUNT } eButton;
+typedef enum
+{
+    BUTTON_LEFT, BUTTON_RIGHT, BUTTON_AMOUNT
+} eButton;
 typedef void (*buttonPressHandler)(void);
 
 void button_new(eButton, buttonPressHandler);

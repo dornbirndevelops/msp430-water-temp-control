@@ -10,29 +10,22 @@
 
 #include <stdint.h>
 
-typedef struct {
-    volatile unsigned char* dir;
-    volatile unsigned char* out;
-    volatile unsigned char* in;
-    volatile unsigned char* ren;
-    uint8_t pin;
-    unsigned parasitic;
-} OneWire;
-
-/*
- * creates a new onewire connection bus at given port and pin.
- */
-OneWire onewire_new(unsigned int port, unsigned int pin);
-
 /*
  * Perform a 1-Wire reset cycle.
  */
-void onewire_reset(OneWire*);
+void onewire_reset();
 
-// unsigned onewire_readBit(OneWire*);
-// void onewire_writeBit(OneWire*, unsigned);
+uint8_t onewire_readByte();
+void onewire_writeByte(uint8_t);
 
-unsigned int onewire_readByte(OneWire*);
-void onewire_writeByte(OneWire*, char);
+uint8_t onewire_read8();
+uint16_t onewire_read16();
+uint32_t onewire_read32();
+uint64_t onewire_read64();
+
+void onewire_write8(uint8_t);
+void onewire_write16(uint16_t);
+void onewire_write32(uint32_t);
+void onewire_write64(uint64_t);
 
 #endif /* ONEWIRE_H_ */

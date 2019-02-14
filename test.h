@@ -12,7 +12,8 @@ void delayTest();
 void ledTest();
 void buttonTest();
 void displayTest();
-void temperatureTest();
-void temperatureTestAlex();
+void deviceIdTest();
+void temperatureSingleTest();
+void temperatureManyTest();
 
 #endif /* TEST_H_ */

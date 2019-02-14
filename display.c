@@ -374,7 +374,6 @@ void displayRX(int show)
     }
 }
 
-
 char *temp2str(unsigned int x)
 {
     static char buf[] = "   00C";
@@ -382,22 +381,26 @@ char *temp2str(unsigned int x)
     unsigned int t = x;
 
     // -> 1234.5°C
-    do {
-        buf[--pos] = (t % 10)+48;
-    } while(t /= 10);
+    do
+    {
+        buf[--pos] = (t % 10) + 48;
+    }
+    while (t /= 10);
 
-   return buf;
+    return buf;
 }
 
 // Displays input temperature in °C
-void displayTemperature(float temp) {
+void displayTemperature(float temp)
+{
     clearLCD();
 
-    int temperature = (int)(temp * 10);
+    int temperature = (int) (temp * 10);
 
     /* negative sign */
     unsigned int isNegative = (temperature) < 0;
-    if (isNegative) {
+    if (isNegative)
+    {
         temperature *= -1;
     }
 
@@ -412,11 +415,13 @@ void displayTemperature(float temp) {
     LCDBM16 |= 0x04;
 
     /* minus */
-    if (isNegative) {
+    if (isNegative)
+    {
         LCDM11 |= 0x04;
         LCDBM11 |= 0x04;
     }
-    else {
+    else
+    {
         LCDM11 &= ~0x04;
         LCDBM11 &= ~0x04;
     }

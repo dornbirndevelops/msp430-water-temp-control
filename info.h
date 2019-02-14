@@ -115,47 +115,47 @@
  */
 
 /*
-#define TEMP_TARGET_INITIAL 40
-#define TEMP_MIN 5
-#define TEMP_MAX 95
+ #define TEMP_TARGET_INITIAL 40
+ #define TEMP_MIN 5
+ #define TEMP_MAX 95
 
 
-// forward declarations
-void onButtonLeftPress();
-void onButtonRightPress();
+ // forward declarations
+ void onButtonLeftPress();
+ void onButtonRightPress();
 
-static int tempTarget = TEMP_TARGET_INITIAL;
+ static int tempTarget = TEMP_TARGET_INITIAL;
 
-void goToSettingMode() {
-    // ...
-    mode = SETTING;
-}
+ void goToSettingMode() {
+ // ...
+ mode = SETTING;
+ }
 
-void onButtonLeftPress() {
-    if (mode == CONTROL) {
-        goToSettingMode();
-    } else {
-        // prevent going too low
-        if (tempTarget > TEMP_MIN) {
-            tempTarget--;
-        }
-        // update display?
-        // revert inactivity duration counter
-    }
-}
+ void onButtonLeftPress() {
+ if (mode == CONTROL) {
+ goToSettingMode();
+ } else {
+ // prevent going too low
+ if (tempTarget > TEMP_MIN) {
+ tempTarget--;
+ }
+ // update display?
+ // revert inactivity duration counter
+ }
+ }
 
-void onButtonRightPress() {
-    if (mode == CONTROL) {
-        // update display?
-    } else {
-        // prevent going too high
-        if (tempTarget < TEMP_MAX) {
-            tempTarget++;
-        }
-        // update display?
-        // revert inactivity duration counter
-    }
-}
-*/
+ void onButtonRightPress() {
+ if (mode == CONTROL) {
+ // update display?
+ } else {
+ // prevent going too high
+ if (tempTarget < TEMP_MAX) {
+ tempTarget++;
+ }
+ // update display?
+ // revert inactivity duration counter
+ }
+ }
+ */
 
 #endif /* INFO_H_ */

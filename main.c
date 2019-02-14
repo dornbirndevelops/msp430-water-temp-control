@@ -1,6 +1,8 @@
 #include "boot.h"
 #include "test.h"
 
+#include <stdint.h>
+
 #define STARTUP_MODE 0
 volatile unsigned char mode = STARTUP_MODE;
 
@@ -10,12 +12,10 @@ int main(void)
     //ledTest();
     //buttonTest();
     //displayTest();
-    temperatureTestAlex();
-
-    while (1) {
-        //delayTest();
-        temperatureTest();
-
+    while (1)
+    {
+        //deviceIdTest();
+        temperatureManyTest();
     }
 }
 
@@ -25,15 +25,10 @@ int main(void)
  * add display driver
  * add LED driver
  * do some wiring like in the wiring image
- *
- * TODO:
- *
  * read ROM command is for one device only
- *
  * add OneWire and Temperature Reader
  *
- *
- *
+ * TODO:
  * add Control logic
  * test control logic by using leds (at first)
  * add pumping circuit

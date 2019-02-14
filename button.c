@@ -5,10 +5,10 @@
  *      Author: alex
  */
 #include "button.h"
-#include "types.h"
 #include "bitops.h"
 
 #include <msp430.h>
+#define NULL ((void*)0)
 
 static buttonPressHandler _pressHandlers[] = { NULL, NULL };
 static int _buttonPinMap[] = { 1, 2 };

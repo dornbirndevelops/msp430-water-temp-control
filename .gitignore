@@ -1,0 +1,12 @@
+/Debug/
+/Debug__TI/
+/.launches/
+/.settings/
+/targetConfigs/
+
+.ccsproject
+.ccsproject
+.project
+*.cmd
+*.ld
+
