@@ -27,8 +27,11 @@ int main(void)
  * do some wiring like in the wiring image
  * read ROM command is for one device only
  * add OneWire and Temperature Reader
+ * correct temperature interpretation
+ * include ids of other temperature sensors (maybe label them too)
  *
  * TODO:
+ *
  * add Control logic
  * test control logic by using leds (at first)
  * add pumping circuit

@@ -79,9 +79,13 @@ void deviceIdTest()
     __delay_cycles(200000);
 }
 
-#define THERMOMETER_COUNT 1
+#define THERMOMETER_COUNT 3
 static float temperatures[THERMOMETER_COUNT] = { 0.0 };
-static deviceaddress_t devices[THERMOMETER_COUNT] = { 0x0D0114339EA1D228 };
+static deviceaddress_t devices[THERMOMETER_COUNT] = {
+    0x0D0114339EA1D228,
+    0x8A01143392748328,
+    0x8402131D69F9AA28
+};
 
 void temperatureManyTest()
 {
@@ -90,7 +94,6 @@ void temperatureManyTest()
     while (i--)
     {
         displayTemperature(temperatures[i]);
-        __delay_cycles(200000);
+        __delay_cycles(5000000);
     }
-    __delay_cycles(500000);
 }

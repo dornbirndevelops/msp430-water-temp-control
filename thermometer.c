@@ -38,7 +38,7 @@ float _convertRawTemperatureC(uint16_t rawTemp)
     {
         rawTemp = (~rawTemp) + 1;
     }
-    return ((float) rawTemp / 8.0);
+    return ((float) rawTemp * 0.0625);
 }
 
 float _readTemperatureC(deviceaddress_t device)
