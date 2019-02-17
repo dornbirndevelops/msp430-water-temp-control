@@ -4,7 +4,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM./Users/alex/workspace/WaterTempControl/targetConfigs/MSP430FR6989.ccxml.TI MSP430 USB1/MSP430" value="${build_artifact:WaterTempControl}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT./Users/alex/workspace/WaterTempControl/targetConfigs/MSP430FR6989.ccxml.TI MSP430 USB1/MSP430" value="WaterTempControl"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:WaterTempControl}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM./Users/alex/workspace/WaterTempControl/targetConfigs/MSP430FR6989.ccxml.TI MSP430 USB1/MSP430" value="/Users/alex/workspace/WaterTempControl/Debug/WaterTempControl.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM./Users/alex/workspace/WaterTempControl/targetConfigs/MSP430FR6989.ccxml.TI MSP430 USB1/MSP430" value="/Users/alex/workspace/WaterTempControl/Debug__TI/WaterTempControl.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/WaterTempControl"/>
 </listAttribute>

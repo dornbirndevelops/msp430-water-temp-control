@@ -1,8 +1,8 @@
-/Debug/
-/Debug__TI/
-/.launches/
-/.settings/
-/targetConfigs/
+Debug
+Debug__TI
+.launches
+.settings/*
+targetConfigs
 
 .ccsproject
 .ccsproject

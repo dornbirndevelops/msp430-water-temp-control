@@ -10,17 +10,6 @@
 
 #include <stdint.h>
 
-// set new resolution
-// clear 0x60
-// set resolution value
-typedef enum
-{
-    RESOLUTION_9 = 0x00,
-    RESOLUTION_10 = 0x20,
-    RESOLUTION_11 = 0x64,
-    RESOLUTION_12 = 0x60,
-} deviceresolution_t;
-
 typedef uint64_t deviceaddress_t;
 
 deviceaddress_t thermometer_getAddress(); // only works on single connected devices

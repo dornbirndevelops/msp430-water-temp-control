@@ -8,6 +8,8 @@
 #include <msp430.h>
 #include "string.h"
 
+#define STARTUP_MODE 0
+volatile unsigned char mode = STARTUP_MODE;
 volatile int antshow = 0;
 volatile int txshow = 0;
 volatile int rxshow = 0;
